@@ -1,0 +1,5 @@
+:root {
+  --surface-color-primary: #F4F8FA;
+  --surface-color-white: var(--color-white);
+  --surface-color-salmon: #FFDBCB;
+}

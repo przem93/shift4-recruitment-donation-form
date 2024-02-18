@@ -1,0 +1,32 @@
+.FontColor {
+  --font-color: var(--font-color-black);
+  color: var(--font-color);
+}
+
+.MidnightPurple {
+  --font-color: var(--font-color-midnight-purple)
+}
+
+.MidnightGrey {
+  --font-color: var(--font-color-midnight-grey)
+}
+
+.MidnightBlue {
+  --font-color: var(--font-color-midnight-blue)
+}
+
+.White {
+  --font-color: var(--font-color-white)
+}
+
+.Black {
+  --font-color: var(--font-color-black)
+}
+
+.LightGrey {
+  --font-color: var(--font-color-light-grey)
+}
+
+.PurpleGrey {
+  --font-color: var(--font-color-purple-grey)
+}

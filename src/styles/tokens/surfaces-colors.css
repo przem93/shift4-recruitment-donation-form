@@ -1,5 +1,6 @@
 :root {
-  --surface-color-primary: #F4F8FA;
+  --surface-color-sky-blue: #F4F8FA;
   --surface-color-white: var(--color-white);
   --surface-color-salmon: #FFDBCB;
+  --surface-color-purple: var(--color-midnight-purple);
 }

@@ -1,0 +1,9 @@
+:root {
+  --font-color-midnight-purple: var(--color-midnight-purple);
+  --font-color-midnight-grey: var(--color-midnight-grey);
+  --font-color-midnight-blue: var(--color-midnight-blue);
+  --font-color-white: var(--color-white);
+  --font-color-black: var(--color-black);
+  --font-color-light-grey: var(--color-light-grey);
+  --font-color-purple-grey: var(--color-purple-grey);
+}

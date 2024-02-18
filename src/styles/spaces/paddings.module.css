@@ -1,0 +1,124 @@
+.Padding {
+  --padding-top: 0;
+  --padding-right: 0;
+  --padding-bottom: 0;
+  --padding-left: 0;
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+}
+
+/* Padding top */
+.PaddingTopXXSmall {
+  --padding-top: var(--space-xx-small);
+}
+
+.PaddingTopXSmall {
+  --padding-top: var(--space-x-small);
+}
+
+.PaddingTopSmall {
+  --padding-top: var(--space-small);
+}
+
+.PaddingTopMedium {
+  --padding-top: var(--space-medium);
+}
+
+.PaddingTopLarge {
+  --padding-top: var(--space-large);
+}
+
+.PaddingTopXLarge {
+  --padding-top: var(--space-x-large);
+}
+
+.PaddingTopXXLarge {
+  --padding-top: var(--space-xx-large);
+}
+
+/* Padding right */
+.PaddingRightXXSmall {
+  --padding-right: var(--space-xx-small);
+}
+
+.PaddingRightXSmall {
+  --padding-right: var(--space-x-small);
+}
+
+.PaddingRightSmall {
+  --padding-right: var(--space-small);
+}
+
+.PaddingRightMedium {
+  --padding-right: var(--space-medium);
+}
+
+.PaddingRightLarge {
+  --padding-right: var(--space-large);
+}
+
+.PaddingRightXLarge {
+  --padding-right: var(--space-x-large);
+}
+
+.PaddingRightXXLarge {
+  --padding-right: var(--space-xx-large);
+}
+
+/* Padding bottom */
+.PaddingBottomXXSmall {
+  --padding-bottom: var(--space-xx-small);
+}
+
+.PaddingBottomXSmall {
+  --padding-bottom: var(--space-x-small);
+}
+
+.PaddingBottomSmall {
+  --padding-bottom: var(--space-small);
+}
+
+.PaddingBottomMedium {
+  --padding-bottom: var(--space-medium);
+}
+
+.PaddingBottomLarge {
+  --padding-bottom: var(--space-large);
+}
+
+.PaddingBottomXLarge {
+  --padding-bottom: var(--space-x-large);
+}
+
+.PaddingBottomXXLarge {
+  --padding-bottom: var(--space-xx-large);
+}
+
+/* Padding left */
+.PaddingLeftXXSmall {
+  --padding-left: var(--space-xx-small);
+}
+
+.PaddingLeftXSmall {
+  --padding-left: var(--space-x-small);
+}
+
+.PaddingLeftSmall {
+  --padding-left: var(--space-small);
+}
+
+.PaddingLeftMedium {
+  --padding-left: var(--space-medium);
+}
+
+.PaddingLeftLarge {
+  --padding-left: var(--space-large);
+}
+
+.PaddingLeftXLarge {
+  --padding-left: var(--space-x-large);
+}
+
+.PaddingLeftXXLarge {
+  --padding-left: var(--space-xx-large);
+}
+  

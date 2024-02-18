@@ -1,4 +1,8 @@
 :root {
   --border-light: 1px solid #e9eef2;
   --border-dark: 1px solid var(--color-midnight-blue);
+  --border-none: none;
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 5px;
 }

@@ -1,0 +1,19 @@
+.FontWeight {
+  font-weight: var(--font-weight, var(----font-weight-normal));
+}
+
+.Light {
+  --font-weight: var(--font-weight-light)
+}
+
+.Medium {
+  --font-weight: var(--font-weight-medium)
+}
+
+.SemiBold {
+  --font-weight: var(--font-weight-semi-bold)
+}
+
+.Bold {
+  --font-weight: var(--font-weight-bold)
+}

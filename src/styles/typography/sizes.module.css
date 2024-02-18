@@ -1,0 +1,25 @@
+.FontSize {
+  --font-size: var(--font-size-base);
+  font-size: var(--font-size);
+}
+
+.XLarge {
+  --font-size: var(--font-size-x-large)
+}
+
+.Large {
+  --font-size: var(--font-size-x-large)
+}
+
+.Medium {
+  --font-size: var(--font-size-medium)
+}
+
+.Small {
+  --font-size: var(--font-size-small)
+}
+
+.XSmall {
+  --font-size: var(--font-size-x-small)
+}
+

@@ -1,0 +1,15 @@
+.Border {
+  border: var(--border, none);
+}
+
+.Dark {
+  --border: var(--border-dark);
+}
+
+.Light {
+  --border: var(--border-light);
+}
+
+.None {
+  --border: var(--border-none);
+}

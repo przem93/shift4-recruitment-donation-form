@@ -1,0 +1,11 @@
+.BorderRadius {
+  border-radius: var(--border-radius, 0);
+}
+
+.Small {
+  --border-radius: var(--border-radius-small)
+}
+
+.Medium {
+  --border-radius: var(--border-radius-medium)
+}

@@ -1,0 +1,16 @@
+.SurfaceColor {
+  --background-color: var(--surface-color-white);
+  background-color: var(--background-color);
+}
+
+.SkyBlue {
+  --background-color: var(--surface-color-sky-blue)
+}
+
+.Salmon {
+  --background-color: var(--surface-color-salmon)
+}
+
+.Purple {
+  --background-color: var(--surface-color-purple)
+}

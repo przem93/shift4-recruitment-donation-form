@@ -1,0 +1,124 @@
+.Margin {
+  --margin-top: 0;
+  --margin-right: 0;
+  --margin-bottom: 0;
+  --margin-left: 0;
+  margin: var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left);
+}
+
+/* Margin top */
+.MarginTopXXSmall {
+  --margin-top: var(--space-xx-small);
+}
+
+.MarginTopXSmall {
+  --margin-top: var(--space-x-small);
+}
+
+.MarginTopSmall {
+  --margin-top: var(--space-small);
+}
+
+.MarginTopMedium {
+  --margin-top: var(--space-medium);
+}
+
+.MarginTopLarge {
+  --margin-top: var(--space-large);
+}
+
+.MarginTopXLarge {
+  --margin-top: var(--space-x-large);
+}
+
+.MarginTopXXLarge {
+  --margin-top: var(--space-xx-large);
+}
+
+/* Margin right */
+.MarginRightXXSmall {
+  --margin-right: var(--space-xx-small);
+}
+
+.MarginRightXSmall {
+  --margin-right: var(--space-x-small);
+}
+
+.MarginRightSmall {
+  --margin-right: var(--space-small);
+}
+
+.MarginRightMedium {
+  --margin-right: var(--space-medium);
+}
+
+.MarginRightLarge {
+  --margin-right: var(--space-large);
+}
+
+.MarginRightXLarge {
+  --margin-right: var(--space-x-large);
+}
+
+.MarginRightXXLarge {
+  --margin-right: var(--space-xx-large);
+}
+
+/* Margin bottom */
+.MarginBottomXXSmall {
+  --margin-bottom: var(--space-xx-small);
+}
+
+.MarginBottomXSmall {
+  --margin-bottom: var(--space-x-small);
+}
+
+.MarginBottomSmall {
+  --margin-bottom: var(--space-small);
+}
+
+.MarginBottomMedium {
+  --margin-bottom: var(--space-medium);
+}
+
+.MarginBottomLarge {
+  --margin-bottom: var(--space-large);
+}
+
+.MarginBottomXLarge {
+  --margin-bottom: var(--space-x-large);
+}
+
+.MarginBottomXXLarge {
+  --margin-bottom: var(--space-xx-large);
+}
+
+/* Margin left */
+.MarginLeftXXSmall {
+  --margin-left: var(--space-xx-small);
+}
+
+.MarginLeftXSmall {
+  --margin-left: var(--space-x-small);
+}
+
+.MarginLeftSmall {
+  --margin-left: var(--space-small);
+}
+
+.MarginLeftMedium {
+  --margin-left: var(--space-medium);
+}
+
+.MarginLeftLarge {
+  --margin-left: var(--space-large);
+}
+
+.MarginLeftXLarge {
+  --margin-left: var(--space-x-large);
+}
+
+.MarginLeftXXLarge {
+  --margin-left: var(--space-xx-large);
+}
+  

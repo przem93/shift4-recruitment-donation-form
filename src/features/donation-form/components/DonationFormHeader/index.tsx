@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Flex } from "@/components/Flex";
-import givingBlockIcon from "@/icons/GivingBlock.svg";
+import givingBlockIcon from "@/assets/GivingBlock.svg";
 import { H1 } from '@/components/Typography/H1';
 import { Span } from '@/components/Typography/Span';
 

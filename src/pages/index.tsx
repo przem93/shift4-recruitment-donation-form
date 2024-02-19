@@ -1,9 +1,13 @@
 import Head from "next/head";
+import Image from "next/image";
 import { Work_Sans } from "next/font/google";
 
 import { DonationForm } from "@/features/donation-form/DonationForm";
 import { Main } from "@/components/Main";
 import { PlaceSurface } from "@/components/PlaceSurface";
+import { Header } from "@/components/Header";
+
+import LogoImage from '@/assets/Logo.svg'
 
 import styles from '@/styles/HomePage.module.css'
 
@@ -17,6 +21,9 @@ export default function Home() {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <PlaceSurface className={styles.HomePage} color="SkyBlue">
+      <Header logo={
+        <Image alt="Donation form logo" src={LogoImage} />
+      } />
       <Main className={workSans.className}>
         <DonationForm />
       </Main>

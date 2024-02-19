@@ -18,7 +18,6 @@ export const Flex = ({
   className,
   gap,
 }: Props) => {
-  console.log('gap', gap)
   const flexClassNames = useMemo(() => clsx(
     styles.Flex,
     alignItems && [styles.AlignItems, styles[`AlignItems${alignItems}`]],

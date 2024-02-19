@@ -8,13 +8,13 @@ type Colors = 'MidnightPurple' | 'MidnightGrey' | 'MidnightBlue' | 'White' | 'Bl
 type Size = 'XLarge' | 'Large' | 'Medium' | 'Small' | 'XSmall'
 type Weight = 'Light' | 'Medium' | 'SemiBold' | 'Bold'
 
-interface Params {
+export interface HookTypographyParams {
   color?: Colors
   size?: Size
   weight?: Weight
 }
 
-export const useTypography = ({ color, size, weight }: Params) => (
+export const useTypography = ({ color, size, weight }: HookTypographyParams) => (
   useMemo(() => clsx(
     colorsStyles.FontColor,
     color && colorsStyles[color],

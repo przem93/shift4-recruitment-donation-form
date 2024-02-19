@@ -9,7 +9,7 @@ import styles from './styles.module.css'
 
 export const DonationForm = () => (
   <Card className={styles.DonationForm}>
-    <CardHeader>
+    <CardHeader className={styles.Header}>
       <DonationFormHeader />
     </CardHeader>
     <CardContent>test</CardContent>

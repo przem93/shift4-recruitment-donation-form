@@ -1,10 +1,11 @@
 import React, { useMemo } from "react"
 import clsx from 'clsx'
 
-import styles from './Button.module.css'
 import { useSurface } from "@/hooks/useSurface"
 import { useTypography } from "@/hooks/useTypography"
 import { useSpaces } from "@/hooks/useSpaces"
+
+import styles from './styles.module.css'
 
 interface Props {
   children: string

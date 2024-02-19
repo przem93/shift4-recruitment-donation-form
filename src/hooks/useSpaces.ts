@@ -72,7 +72,8 @@ const getSpacesVariant = ({
   bottom,
   left,
 }: GetSpaceVariantParams) => [
-  (all || horizontal || vertical || top || right || bottom || left) && styles[classNamePrefix],
+  (all || horizontal || vertical || top || right || bottom || left || all === 0 
+    || horizontal === 0  || vertical === 0  || top === 0  || right === 0  || bottom === 0  || left === 0 ) && styles[classNamePrefix],
   bottom && styles[constructClassName(classNamePrefix, 'Bottom', bottom)],
   left && styles[constructClassName(classNamePrefix, 'Left', left)],
   right && styles[constructClassName(classNamePrefix, 'Right', right)],

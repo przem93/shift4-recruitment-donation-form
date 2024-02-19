@@ -1,0 +1,39 @@
+.IconButton {
+  --icon-button-size: calc(6 * var(--size-base));
+  appearance: none;
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+  cursor: pointer;
+
+  &.FullWidth {
+    width: 100%;
+  }
+}
+
+.Salmon {
+  &:hover {
+    --background-color: #F2D0C1;
+  }
+
+  &:active {
+    --background-color: #ebbda9;
+  }
+}
+
+.SkyBlue {
+  &:hover {
+    --background-color: #F3F5FE;
+  }
+
+  &:active {
+    --background-color: #E8EAF2;
+  }
+}
+
+.Small {
+  --icon-button-size: calc(6 * var(--size-base));
+}
+
+.Medium {
+  --icon-button-size: calc(10 * var(--size-base));
+}

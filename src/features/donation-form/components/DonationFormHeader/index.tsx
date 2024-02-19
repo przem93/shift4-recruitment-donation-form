@@ -3,6 +3,7 @@ import { Flex } from "@/components/Flex";
 import givingBlockIcon from "@/assets/GivingBlock.svg";
 import { H1 } from '@/components/Typography/H1';
 import { Span } from '@/components/Typography/Span';
+import { IconButton } from '@/components/IconButton';
 
 import styles from './styles.module.css'
 
@@ -13,5 +14,6 @@ export const DonationFormHeader = () => (
       <H1 className={styles.H1} color="MidnightPurple">The giving block</H1>
       <Span color="MidnightGrey" weight="Light">Set up your donation goal!</Span>
     </div>
+    <IconButton className={styles.CloseButton} color="Salmon" icon="close" size="Medium" />
   </Flex>
 )

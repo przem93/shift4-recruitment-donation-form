@@ -25,7 +25,8 @@ export const Flex = ({
     alignItems && styles[`AlignItems${alignItems}`],
     className,
     flexDirection && styles[`FlexDirection${flexDirection}`],
-    gap && [gapsStyles.Gap, gapsStyles[`Gap-${gap}`]],
+    (gap || gap === 0) && gapsStyles.Gap,
+    (gap || gap !== 0) && gapsStyles[`Gap-${gap}`],
   ), [alignItems, className, flexDirection, gap])
   return <div className={flexClassNames}>
     {children}

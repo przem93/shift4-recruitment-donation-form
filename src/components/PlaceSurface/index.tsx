@@ -1,6 +1,6 @@
 import type { HookSpacesParams } from "@/hooks/useSpaces"
 import { useSpaces } from "@/hooks/useSpaces"
-import type { Borders, BordersRadius, BackgroundColors } from "@/hooks/useSurface"
+import type { BackgroundColors, Borders, BordersRadius, Elevations } from "@/hooks/useSurface"
 import { useSurface } from "@/hooks/useSurface"
 import clsx from "clsx"
 import { useMemo } from "react"
@@ -11,6 +11,7 @@ type Props = {
   children: React.ReactNode
   className?: string,
   color?: BackgroundColors
+  elevation?: Elevations
 } & HookSpacesParams
 
 export const PlaceSurface = ({
@@ -19,13 +20,15 @@ export const PlaceSurface = ({
   children,
   className,
   color,
+  elevation,
   ...spacesProps
 }: Props) => {
   const spacesClassNames = useSpaces(spacesProps)
   const surfaceClassNames = useSurface({
     border,
     borderRadius,
-    color
+    color,
+    elevation,
   })
   const placeClassName = useMemo(() => clsx(
     className,

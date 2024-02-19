@@ -7,118 +7,182 @@
 }
 
 /* Margin top */
-.MarginTopXXSmall {
-  --margin-top: var(--space-xx-small);
+.MarginTop-05 {
+  --margin-top: var(--space-05);
 }
 
-.MarginTopXSmall {
-  --margin-top: var(--space-x-small);
+.MarginTop-1 {
+  --margin-top: var(--space-1);
 }
 
-.MarginTopSmall {
-  --margin-top: var(--space-small);
+.MarginTop-2 {
+  --margin-top: var(--space-2);
 }
 
-.MarginTopMedium {
-  --margin-top: var(--space-medium);
+.MarginTop-3 {
+  --margin-top: var(--space-3);
 }
 
-.MarginTopLarge {
-  --margin-top: var(--space-large);
+.MarginTop-4 {
+  --margin-top: var(--space-4);
 }
 
-.MarginTopXLarge {
-  --margin-top: var(--space-x-large);
+.MarginTop-5 {
+  --margin-top: var(--space-5);
 }
 
-.MarginTopXXLarge {
-  --margin-top: var(--space-xx-large);
+.MarginTop-6 {
+  --margin-top: var(--space-6);
+}
+
+.MarginTop-7 {
+  --margin-top: var(--space-7);
+}
+
+.MarginTop-8 {
+  --margin-top: var(--space-8);
+}
+
+.MarginTop-9 {
+  --margin-top: var(--space-9);
+}
+
+.MarginTop-10 {
+  --margin-top: var(--space-10);
 }
 
 /* Margin right */
-.MarginRightXXSmall {
-  --margin-right: var(--space-xx-small);
+.MarginRight-05 {
+  --margin-right: var(--space-05);
 }
 
-.MarginRightXSmall {
-  --margin-right: var(--space-x-small);
+.MarginRight-1 {
+  --margin-right: var(--space-1);
 }
 
-.MarginRightSmall {
-  --margin-right: var(--space-small);
+.MarginRight-2 {
+  --margin-right: var(--space-2);
 }
 
-.MarginRightMedium {
-  --margin-right: var(--space-medium);
+.MarginRight-3 {
+  --margin-right: var(--space-3);
 }
 
-.MarginRightLarge {
-  --margin-right: var(--space-large);
+.MarginRight-4 {
+  --margin-right: var(--space-4);
 }
 
-.MarginRightXLarge {
-  --margin-right: var(--space-x-large);
+.MarginRight-5 {
+  --margin-right: var(--space-5);
 }
 
-.MarginRightXXLarge {
-  --margin-right: var(--space-xx-large);
+.MarginRight-6 {
+  --margin-right: var(--space-6);
+}
+
+.MarginRight-7 {
+  --margin-right: var(--space-7);
+}
+
+.MarginRight-8 {
+  --margin-right: var(--space-8);
+}
+
+.MarginRight-9 {
+  --margin-right: var(--space-9);
+}
+
+.MarginRight-10 {
+  --margin-right: var(--space-10);
 }
 
 /* Margin bottom */
-.MarginBottomXXSmall {
-  --margin-bottom: var(--space-xx-small);
+.MarginBottom-05 {
+  --margin-bottom: var(--space-05);
 }
 
-.MarginBottomXSmall {
-  --margin-bottom: var(--space-x-small);
+.MarginBottom-1 {
+  --margin-bottom: var(--space-1);
 }
 
-.MarginBottomSmall {
-  --margin-bottom: var(--space-small);
+.MarginBottom-2 {
+  --margin-bottom: var(--space-2);
 }
 
-.MarginBottomMedium {
-  --margin-bottom: var(--space-medium);
+.MarginBottom-3 {
+  --margin-bottom: var(--space-3);
 }
 
-.MarginBottomLarge {
-  --margin-bottom: var(--space-large);
+.MarginBottom-4 {
+  --margin-bottom: var(--space-4);
 }
 
-.MarginBottomXLarge {
-  --margin-bottom: var(--space-x-large);
+.MarginBottom-5 {
+  --margin-bottom: var(--space-5);
 }
 
-.MarginBottomXXLarge {
-  --margin-bottom: var(--space-xx-large);
+.MarginBottom-6 {
+  --margin-bottom: var(--space-6);
+}
+
+.MarginBottom-7 {
+  --margin-bottom: var(--space-7);
+}
+
+.MarginBottom-8 {
+  --margin-bottom: var(--space-8);
+}
+
+.MarginBottom-9 {
+  --margin-bottom: var(--space-9);
+}
+
+.MarginBottom-10 {
+  --margin-bottom: var(--space-10);
 }
 
 /* Margin left */
-.MarginLeftXXSmall {
-  --margin-left: var(--space-xx-small);
+.MarginLeft-05 {
+  --margin-left: var(--space-05);
 }
 
-.MarginLeftXSmall {
-  --margin-left: var(--space-x-small);
+.MarginLeft-1 {
+  --margin-left: var(--space-1);
 }
 
-.MarginLeftSmall {
-  --margin-left: var(--space-small);
+.MarginLeft-2 {
+  --margin-left: var(--space-2);
 }
 
-.MarginLeftMedium {
-  --margin-left: var(--space-medium);
+.MarginLeft-3 {
+  --margin-left: var(--space-3);
 }
 
-.MarginLeftLarge {
-  --margin-left: var(--space-large);
+.MarginLeft-4 {
+  --margin-left: var(--space-4);
 }
 
-.MarginLeftXLarge {
-  --margin-left: var(--space-x-large);
+.MarginLeft-5 {
+  --margin-left: var(--space-5);
 }
 
-.MarginLeftXXLarge {
-  --margin-left: var(--space-xx-large);
+.MarginLeft-6 {
+  --margin-left: var(--space-6);
+}
+
+.MarginLeft-7 {
+  --margin-left: var(--space-7);
+}
+
+.MarginLeft-8 {
+  --margin-left: var(--space-8);
+}
+
+.MarginLeft-9 {
+  --margin-left: var(--space-9);
+}
+
+.MarginLeft-10 {
+  --margin-left: var(--space-10);
 }
   

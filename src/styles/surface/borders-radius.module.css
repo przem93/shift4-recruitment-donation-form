@@ -2,6 +2,10 @@
   border-radius: var(--border-radius, 0);
 }
 
+.Small, .Medium {
+  overflow: hidden;
+}
+
 .Small {
   --border-radius: var(--border-radius-small)
 }

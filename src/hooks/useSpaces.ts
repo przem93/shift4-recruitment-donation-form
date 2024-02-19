@@ -2,8 +2,7 @@ import { useMemo } from "react"
 import clsx from "clsx"
 import marginsStyles from "@/styles/spaces/margins.module.css"
 import paddingsStyles from "@/styles/spaces/paddings.module.css"
-
-type Space = 'XXSmall' | 'XSmall' | 'Small' | 'Medium' | 'Large' | 'XLarge' | 'XXLarge'
+import { Space } from "@/types/Space"
 
 type SpacePropName = 'margin' | 'padding'
 
@@ -44,9 +43,11 @@ type PaddingParams = SpaceParams<'padding'>
 
 export type HookSpacesParams = MarginParams & PaddingParams
 
+type Prefix = 'Margin' | 'Padding'
+
 interface GetSpaceVariantParams {
   styles: typeof marginsStyles | typeof paddingsStyles
-  classNamePrefix: 'Margin' | 'Padding'
+  classNamePrefix: Prefix
   all?: Space
   horizontal?: Space
   vertical?: Space
@@ -55,6 +56,10 @@ interface GetSpaceVariantParams {
   bottom?: Space
   left?: Space
 }
+
+const constructClassName = (classNamePrefix: Prefix, place: 'Bottom' | 'Left' | 'Right' | 'Top', space: Space) => (
+  `${classNamePrefix}${place}-${space}`
+)
 
 const getSpacesVariant = ({
   styles,
@@ -68,23 +73,23 @@ const getSpacesVariant = ({
   left,
 }: GetSpaceVariantParams) => [
   (all || horizontal || vertical || top || right || bottom || left) && styles[classNamePrefix],
-  bottom && styles[`${classNamePrefix}Bottom${bottom}`],
-  left && styles[`${classNamePrefix}Left${left}`],
-  right && styles[`${classNamePrefix}Right${right}`],
-  top && styles[`${classNamePrefix}Top${top}`],
+  bottom && styles[constructClassName(classNamePrefix, 'Bottom', bottom)],
+  left && styles[constructClassName(classNamePrefix, 'Left', left)],
+  right && styles[constructClassName(classNamePrefix, 'Right', right)],
+  top && styles[constructClassName(classNamePrefix, 'Top', top)],
   all && [
-    styles[`${classNamePrefix}Bottom${all}`],
-    styles[`${classNamePrefix}Left${all}`],
-    styles[`${classNamePrefix}Right${all}`],
-    styles[`${classNamePrefix}Top${all}`],
+    styles[constructClassName(classNamePrefix, 'Bottom', all)],
+    styles[constructClassName(classNamePrefix, 'Left', all)],
+    styles[constructClassName(classNamePrefix, 'Right', all)],
+    styles[constructClassName(classNamePrefix, 'Top', all)],
   ],
   horizontal && [
-    styles[`${classNamePrefix}Left${horizontal}`],
-    styles[`${classNamePrefix}Right${horizontal}`],
+    styles[constructClassName(classNamePrefix, 'Left', horizontal)],
+    styles[constructClassName(classNamePrefix, 'Right', horizontal)],
   ],
   vertical && [
-    styles[`${classNamePrefix}Bottom${vertical}`],
-    styles[`${classNamePrefix}Top${vertical}`],
+    styles[constructClassName(classNamePrefix, 'Bottom', vertical)],
+    styles[constructClassName(classNamePrefix, 'Top', vertical)],
   ]
 ]
 

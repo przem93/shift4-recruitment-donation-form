@@ -1,10 +1,14 @@
 :root {
-  --space-xx-small: var(--size-base);
-  --space-x-small: calc(var(--space-xx-small));
-  --space-small: calc(var(--space-xx-small) * 2);
-  --space-medium: calc(var(--space-xx-small) * 3);
-  --space-large: calc(var(--space-xx-small) * 4);
-  --space-x-large: calc(var(--space-xx-small) * 5);
-  --space-xx-large: calc(var(--space-xx-small) * 6);
+  --space-05: calc(var(--size-base) / 2);
+  --space-1: var(--size-base);
+  --space-2: calc(var(--space-1) * 2);
+  --space-3: calc(var(--space-1) * 3);
+  --space-4: calc(var(--space-1) * 4);
+  --space-5: calc(var(--space-1) * 5);
+  --space-6: calc(var(--space-1) * 6);
+  --space-7: calc(var(--space-1) * 7);
+  --space-8: calc(var(--space-1) * 8);
+  --space-9: calc(var(--space-1) * 9);
+  --space-10: calc(var(--space-1) * 10);
 }
   

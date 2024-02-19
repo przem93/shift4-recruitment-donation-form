@@ -1,0 +1,8 @@
+.Elevation {
+  --box-shadow: none;
+  box-shadow: var(--box-shadow);
+}
+
+.Level-1 {
+  --box-shadow: var(--elevation-1)
+}

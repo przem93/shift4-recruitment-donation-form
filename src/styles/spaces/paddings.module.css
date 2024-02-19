@@ -7,118 +7,182 @@
 }
 
 /* Padding top */
-.PaddingTopXXSmall {
-  --padding-top: var(--space-xx-small);
+.PaddingTop-05 {
+  --padding-top: var(--space-05);
 }
 
-.PaddingTopXSmall {
-  --padding-top: var(--space-x-small);
+.PaddingTop-1 {
+  --padding-top: var(--space-1);
 }
 
-.PaddingTopSmall {
-  --padding-top: var(--space-small);
+.PaddingTop-2 {
+  --padding-top: var(--space-2);
 }
 
-.PaddingTopMedium {
-  --padding-top: var(--space-medium);
+.PaddingTop-3 {
+  --padding-top: var(--space-3);
 }
 
-.PaddingTopLarge {
-  --padding-top: var(--space-large);
+.PaddingTop-4 {
+  --padding-top: var(--space-4);
 }
 
-.PaddingTopXLarge {
-  --padding-top: var(--space-x-large);
+.PaddingTop-5 {
+  --padding-top: var(--space-5);
 }
 
-.PaddingTopXXLarge {
-  --padding-top: var(--space-xx-large);
+.PaddingTop-6 {
+  --padding-top: var(--space-6);
+}
+
+.PaddingTop-7 {
+  --padding-top: var(--space-7);
+}
+
+.PaddingTop-8 {
+  --padding-top: var(--space-8);
+}
+
+.PaddingTop-9 {
+  --padding-top: var(--space-9);
+}
+
+.PaddingTop-10 {
+  --padding-top: var(--space-10);
 }
 
 /* Padding right */
-.PaddingRightXXSmall {
-  --padding-right: var(--space-xx-small);
+.PaddingRight-05 {
+  --padding-right: var(--space-05);
 }
 
-.PaddingRightXSmall {
-  --padding-right: var(--space-x-small);
+.PaddingRight-1 {
+  --padding-right: var(--space-1);
 }
 
-.PaddingRightSmall {
-  --padding-right: var(--space-small);
+.PaddingRight-2 {
+  --padding-right: var(--space-2);
 }
 
-.PaddingRightMedium {
-  --padding-right: var(--space-medium);
+.PaddingRight-3 {
+  --padding-right: var(--space-3);
 }
 
-.PaddingRightLarge {
-  --padding-right: var(--space-large);
+.PaddingRight-4 {
+  --padding-right: var(--space-4);
 }
 
-.PaddingRightXLarge {
-  --padding-right: var(--space-x-large);
+.PaddingRight-5 {
+  --padding-right: var(--space-5);
 }
 
-.PaddingRightXXLarge {
-  --padding-right: var(--space-xx-large);
+.PaddingRight-6 {
+  --padding-right: var(--space-6);
+}
+
+.PaddingRight-7 {
+  --padding-right: var(--space-7);
+}
+
+.PaddingRight-8 {
+  --padding-right: var(--space-8);
+}
+
+.PaddingRight-9 {
+  --padding-right: var(--space-9);
+}
+
+.PaddingRight-10 {
+  --padding-right: var(--space-10);
 }
 
 /* Padding bottom */
-.PaddingBottomXXSmall {
-  --padding-bottom: var(--space-xx-small);
+.PaddingBottom-05 {
+  --padding-bottom: var(--space-05);
 }
 
-.PaddingBottomXSmall {
-  --padding-bottom: var(--space-x-small);
+.PaddingBottom-1 {
+  --padding-bottom: var(--space-1);
 }
 
-.PaddingBottomSmall {
-  --padding-bottom: var(--space-small);
+.PaddingBottom-2 {
+  --padding-bottom: var(--space-2);
 }
 
-.PaddingBottomMedium {
-  --padding-bottom: var(--space-medium);
+.PaddingBottom-3 {
+  --padding-bottom: var(--space-3);
 }
 
-.PaddingBottomLarge {
-  --padding-bottom: var(--space-large);
+.PaddingBottom-4 {
+  --padding-bottom: var(--space-4);
 }
 
-.PaddingBottomXLarge {
-  --padding-bottom: var(--space-x-large);
+.PaddingBottom-5 {
+  --padding-bottom: var(--space-5);
 }
 
-.PaddingBottomXXLarge {
-  --padding-bottom: var(--space-xx-large);
+.PaddingBottom-6 {
+  --padding-bottom: var(--space-6);
+}
+
+.PaddingBottom-7 {
+  --padding-bottom: var(--space-7);
+}
+
+.PaddingBottom-8 {
+  --padding-bottom: var(--space-8);
+}
+
+.PaddingBottom-9 {
+  --padding-bottom: var(--space-9);
+}
+
+.PaddingBottom-10 {
+  --padding-bottom: var(--space-10);
 }
 
 /* Padding left */
-.PaddingLeftXXSmall {
-  --padding-left: var(--space-xx-small);
+.PaddingLeft-05 {
+  --padding-left: var(--space-05);
 }
 
-.PaddingLeftXSmall {
-  --padding-left: var(--space-x-small);
+.PaddingLeft-1 {
+  --padding-left: var(--space-1);
 }
 
-.PaddingLeftSmall {
-  --padding-left: var(--space-small);
+.PaddingLeft-2 {
+  --padding-left: var(--space-2);
 }
 
-.PaddingLeftMedium {
-  --padding-left: var(--space-medium);
+.PaddingLeft-3 {
+  --padding-left: var(--space-3);
 }
 
-.PaddingLeftLarge {
-  --padding-left: var(--space-large);
+.PaddingLeft-4 {
+  --padding-left: var(--space-4);
 }
 
-.PaddingLeftXLarge {
-  --padding-left: var(--space-x-large);
+.PaddingLeft-5 {
+  --padding-left: var(--space-5);
 }
 
-.PaddingLeftXXLarge {
-  --padding-left: var(--space-xx-large);
+.PaddingLeft-6 {
+  --padding-left: var(--space-6);
+}
+
+.PaddingLeft-7 {
+  --padding-left: var(--space-7);
+}
+
+.PaddingLeft-8 {
+  --padding-left: var(--space-8);
+}
+
+.PaddingLeft-9 {
+  --padding-left: var(--space-9);
+}
+
+.PaddingLeft-10 {
+  --padding-left: var(--space-10);
 }
   

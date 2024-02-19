@@ -1,0 +1,48 @@
+.Gap {
+  --gap: 0;
+  gap: var(--gap);
+}
+
+.Gap-05 {
+  --gap: var(--space-05);
+}
+
+.Gap-1 {
+  --gap: var(--space-1);
+}
+
+.Gap-2 {
+  --gap: var(--space-2);
+}
+
+.Gap-3 {
+  --gap: var(--space-3);
+}
+
+.Gap-4 {
+  --gap: var(--space-4);
+}
+
+.Gap-5 {
+  --gap: var(--space-5);
+}
+
+.Gap-6 {
+  --gap: var(--space-6);
+}
+
+.Gap-7 {
+  --gap: var(--space-7);
+}
+
+.Gap-8 {
+  --gap: var(--space-8);
+}
+
+.Gap-9 {
+  --gap: var(--space-9);
+}
+
+.Gap-10 {
+  --gap: var(--space-10);
+}

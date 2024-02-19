@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import clsx from 'clsx'
 
 import styles from './Button.module.css'
@@ -31,18 +31,20 @@ export const Button = ({
     weight: "SemiBold"
   })
   const spacesClassNames = useSpaces({
-    paddingHorizontal: "XLarge"
+    paddingHorizontal: 4,
+    margin: 2
   })
+  const buttonClassNames = useMemo(() => clsx(
+    styles.Button,
+    surfaceClassNames,
+    typographyClassNames,
+    spacesClassNames,
+    variant === "contained" && styles.Contained,
+    variant === "outlined" && styles.Outlined,
+    fullWidth && styles.FullWidth
+  ), [fullWidth, spacesClassNames, surfaceClassNames, typographyClassNames, variant])
   return <button
-    className={clsx(
-      styles.Button,
-      surfaceClassNames,
-      typographyClassNames,
-      spacesClassNames,
-      variant === "contained" && styles.Contained,
-      variant === "outlined" && styles.Outlined,
-      fullWidth && styles.FullWidth
-    )}
+    className={buttonClassNames}
     data-testid={dataTestId}
     onClick={onClick}
   >

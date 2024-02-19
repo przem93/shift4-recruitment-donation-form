@@ -42,7 +42,7 @@ type SpaceParams<PropName extends SpacePropName> =
 type MarginParams = SpaceParams<'margin'>
 type PaddingParams = SpaceParams<'padding'>
 
-type Params = MarginParams & PaddingParams
+export type HookSpacesParams = MarginParams & PaddingParams
 
 interface GetSpaceVariantParams {
   styles: typeof marginsStyles | typeof paddingsStyles
@@ -103,7 +103,7 @@ export const useSpaces = ({
   paddingRight,
   paddingTop,
   paddingVertical
-}: Params) => (
+}: HookSpacesParams) => (
   useMemo(() => clsx(
     ...getSpacesVariant({
       styles: marginsStyles,

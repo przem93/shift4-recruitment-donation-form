@@ -4,14 +4,14 @@ import borderStyles from "@/styles/surface/borders.module.css"
 import borderRadiusStyles from "@/styles/surface/borders-radius.module.css"
 import colorsStyles from "@/styles/surface/colors.module.css"
 
-type Borders = 'Light' | 'Dark' | 'None'
-type BordersRadius = 'Small' | 'Medium'
-type Colors = 'SkyBlue' | 'Salmon' | 'Purple'
+export type Borders = 'Light' | 'Dark' | 'None'
+export type BordersRadius = 'Small' | 'Medium'
+export type BackgroundColors = 'SkyBlue' | 'Salmon' | 'Purple'
 
 interface Params {
   border?: Borders
   borderRadius?: BordersRadius
-  color?: Colors
+  color?: BackgroundColors
 }
 
 export const useSurface = ({ border, borderRadius, color }: Params) => (

@@ -1,3 +1,13 @@
 .DonationForm {
   grid-column: content;
+
+  @media (width <= 600px) {
+    height: 100vh;
+  }
+}
+
+.CancelButton {
+  @media (width <= 600px) {
+    display: none;
+  }
 }

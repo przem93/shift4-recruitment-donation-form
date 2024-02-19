@@ -8,6 +8,7 @@ import { useSpaces } from "@/hooks/useSpaces"
 
 interface Props {
   children: string
+  className?: string
   dataTestId: string
   fullWidth?: boolean
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
@@ -16,6 +17,7 @@ interface Props {
 
 export const Button = ({ 
   children,
+  className,
   dataTestId,
   fullWidth,
   onClick,
@@ -35,6 +37,7 @@ export const Button = ({
     margin: 2
   })
   const buttonClassNames = useMemo(() => clsx(
+    className,
     styles.Button,
     surfaceClassNames,
     typographyClassNames,
@@ -42,7 +45,7 @@ export const Button = ({
     variant === "contained" && styles.Contained,
     variant === "outlined" && styles.Outlined,
     fullWidth && styles.FullWidth
-  ), [fullWidth, spacesClassNames, surfaceClassNames, typographyClassNames, variant])
+  ), [className, fullWidth, spacesClassNames, surfaceClassNames, typographyClassNames, variant])
   return <button
     className={buttonClassNames}
     data-testid={dataTestId}

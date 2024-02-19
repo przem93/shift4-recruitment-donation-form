@@ -4,10 +4,11 @@ import { useSurface } from "@/hooks/useSurface"
 import { useSpaces } from "@/hooks/useSpaces"
 
 interface Props {
+  className?: string
   logo: React.ReactNode
 }
 
-export const Header = ({ logo }: Props) => {
+export const Header = ({ className, logo }: Props) => {
   const surfaceClassNames = useSurface({
     color: "White"
   })
@@ -17,10 +18,11 @@ export const Header = ({ logo }: Props) => {
   })
   const headerClassName = useMemo(() => (
     clsx(
+      className,
       spacesClassNames,
       surfaceClassNames
     )
-  ), [spacesClassNames, surfaceClassNames])
+  ), [className, spacesClassNames, surfaceClassNames])
 
   return <header className={headerClassName}>
     {logo}

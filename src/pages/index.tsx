@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Head from "next/head";
 import Image from "next/image";
 import { Work_Sans } from "next/font/google";
@@ -20,11 +21,11 @@ export default function Home() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <PlaceSurface className={styles.HomePage} color="SkyBlue">
-      <Header logo={
+    <PlaceSurface className={clsx(styles.HomePage, workSans.className)} color="SkyBlue">
+      <Header className={styles.Header} logo={
         <Image alt="Donation form logo" src={LogoImage} />
       } />
-      <Main className={workSans.className}>
+      <Main>
         <DonationForm />
       </Main>
     </PlaceSurface>

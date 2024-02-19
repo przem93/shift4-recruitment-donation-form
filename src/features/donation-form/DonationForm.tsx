@@ -14,7 +14,7 @@ export const DonationForm = () => (
     </CardHeader>
     <CardContent>test</CardContent>
     <CardFooter>
-      <Button dataTestId="cancel" variant="outlined" fullWidth>Cancel</Button>
+      <Button className={styles.CancelButton} dataTestId="cancel" variant="outlined" fullWidth>Cancel</Button>
       <Button dataTestId="Continue" fullWidth>Continue</Button>
     </CardFooter>
   </Card>

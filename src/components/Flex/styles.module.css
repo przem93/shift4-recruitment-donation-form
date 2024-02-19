@@ -1,10 +1,17 @@
 .Flex {
+  --align-items: flex-start;
+  --flex-direction: row;
   display: flex;
+  align-items: var(--align-items);
+  flex-direction: var(--flex-direction)
 }
 
-.AlignItems {
-  --align-items: flex-start;
-  align-items: var(--align-items);
+.FlexDirectionColumn {
+  --flex-direction: column;
+}
+
+.FlexDirectionRow {
+  --flex-direction: row;
 }
 
 .AlignItemsCenter {

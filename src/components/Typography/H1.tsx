@@ -6,9 +6,10 @@ import { useMemo } from "react"
 
 interface Props extends Omit<HookTypographyParams, 'size'> {
   children: React.ReactNode
+  className?: string
 }
 
-export const H1 = ({ children, ...props }: Props) => {
+export const H1 = ({ children, className, ...props }: Props) => {
   const typographyClassNames = useTypography({
     size: "XLarge",
     weight: "SemiBold",
@@ -18,8 +19,8 @@ export const H1 = ({ children, ...props }: Props) => {
     marginBottom: 1
   })
   const h1ClassNames = useMemo(() => (
-    clsx(typographyClassNames, spacesClassName)
-  ), [spacesClassName, typographyClassNames])
+    clsx(className, typographyClassNames, spacesClassName)
+  ), [className, spacesClassName, typographyClassNames])
   return <h1 className={h1ClassNames}>
     {children}
   </h1>

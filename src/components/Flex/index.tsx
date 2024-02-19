@@ -9,6 +9,7 @@ interface Props {
   alignItems?: 'Center' | 'FlexEnd' | 'FlexStart'
   children: React.ReactNode
   className?: string
+  flexDirection?: 'Column' | 'Row'
   gap?: Space
 }
 
@@ -16,14 +17,16 @@ export const Flex = ({
   alignItems,
   children,
   className,
+  flexDirection,
   gap,
 }: Props) => {
   const flexClassNames = useMemo(() => clsx(
     styles.Flex,
-    alignItems && [styles.AlignItems, styles[`AlignItems${alignItems}`]],
+    alignItems && styles[`AlignItems${alignItems}`],
     className,
+    flexDirection && styles[`FlexDirection${flexDirection}`],
     gap && [gapsStyles.Gap, gapsStyles[`Gap-${gap}`]],
-  ), [alignItems, className, gap])
+  ), [alignItems, className, flexDirection, gap])
   return <div className={flexClassNames}>
     {children}
   </div>

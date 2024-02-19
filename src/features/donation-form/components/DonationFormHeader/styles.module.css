@@ -1,0 +1,13 @@
+.DonationFormHeader {
+  @container (width < 600px) {
+    --flex-direction: column;
+    --gap: var(--space-4);
+    text-align: center;
+  }
+}
+
+.H1 {
+  @container (width < 600px) {
+    --font-size: var(--font-size-large);
+  }
+}

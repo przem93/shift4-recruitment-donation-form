@@ -1,6 +1,8 @@
 .FontSize {
   --font-size: var(--font-size-base);
+  --line-height: 0.25rem;
   font-size: var(--font-size);
+  line-height: calc(var(--font-size) + var(--line-height));
 }
 
 .XLarge {

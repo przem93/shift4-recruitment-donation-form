@@ -1,3 +1,20 @@
 .Flex {
   display: flex;
 }
+
+.AlignItems {
+  --align-items: flex-start;
+  align-items: var(--align-items);
+}
+
+.AlignItemsCenter {
+  --align-items: center;
+}f
+
+.AlignItemsFlexStart {
+  --align-items: flex-start;
+}
+
+.AlignItemsFlexEnd {
+  --align-items: flex-end;
+}

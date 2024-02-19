@@ -11,6 +11,7 @@ interface Props extends Omit<HookTypographyParams, 'size'> {
 export const H1 = ({ children, ...props }: Props) => {
   const typographyClassNames = useTypography({
     size: "XLarge",
+    weight: "SemiBold",
     ...props
   })
   const spacesClassName = useSpaces({

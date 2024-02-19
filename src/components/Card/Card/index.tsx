@@ -1,4 +1,5 @@
 import { PlaceSurface } from "@/components/PlaceSurface"
+import clsx from "clsx"
 import type { CardContent, CardContentProps } from "../CardContent"
 import type { CardFooter, CardFooterProps } from "../CardFooter"
 import type { CardHeaderProps, CardHeader } from "../CardHeader"
@@ -13,12 +14,13 @@ type Child = ContentChild | FooterChild | HeaderChild
 
 interface Props {
   children?: Child | Child[]
+  className?: string
 }
 
-export const Card = ({ children }: Props) => (
+export const Card = ({ children, className }: Props) => (
   <PlaceSurface
     borderRadius="Medium"
-    className={styles.Card}
+    className={clsx(styles.Card, className)}
     color="White"
     elevation={1}
   >

@@ -103,9 +103,7 @@ export const useSpaces = ({
   paddingRight,
   paddingTop,
   paddingVertical
-}: Params) => {
-  console.log('paddingVertical', paddingVertical)
-  return (
+}: Params) => (
   useMemo(() => clsx(
     ...getSpacesVariant({
       styles: marginsStyles,
@@ -147,4 +145,3 @@ export const useSpaces = ({
     paddingVertical
   ])
 )
-}

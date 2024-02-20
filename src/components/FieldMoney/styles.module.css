@@ -1,0 +1,17 @@
+.Field {
+  &:has(.Input:focus) {
+    --border: var(--border-dark);
+  }
+}
+
+.Input {
+  outline: none;
+  width: calc(100% - (8 * var(--space-1)));
+  padding-block: 0;
+  padding-inline: 0;
+  
+  &::placeholder {
+    color: var(--font-color-light-grey);
+    opacity: 1;
+  }
+}

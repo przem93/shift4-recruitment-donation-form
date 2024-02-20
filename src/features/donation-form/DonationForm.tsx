@@ -1,21 +1,42 @@
+import { FormProvider, useForm } from "react-hook-form";
+
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card/Card";
 import { CardContent } from "@/components/Card/CardContent";
 import { CardFooter } from "@/components/Card/CardFooter";
 import { CardHeader } from "@/components/Card/CardHeader";
+import { DonationFormContent } from "./components/DonationFormContent";
 import { DonationFormHeader } from "./components/DonationFormHeader";
 
 import styles from './styles.module.css'
 
-export const DonationForm = () => (
-  <Card className={styles.DonationForm}>
-    <CardHeader className={styles.Header}>
-      <DonationFormHeader />
-    </CardHeader>
-    <CardContent>test</CardContent>
-    <CardFooter>
-      <Button className={styles.CancelButton} dataTestId="cancel" variant="outlined" fullWidth>Cancel</Button>
-      <Button dataTestId="Continue" fullWidth>Continue</Button>
-    </CardFooter>
-  </Card>
-)
+export const DonationForm = () => {
+  const methods = useForm({
+    mode: "onChange",
+    reValidateMode: "onChange",
+  })
+
+  return (
+    <FormProvider {...methods}>
+      <form
+        className={styles.Form}
+        onSubmit={methods.handleSubmit((e) => {
+          console.log(e)
+        })}
+      >
+        <Card className={styles.Card}>
+          <CardHeader className={styles.Header}>
+            <DonationFormHeader />
+          </CardHeader>
+          <CardContent>
+            <DonationFormContent />
+          </CardContent>
+          <CardFooter>
+            <Button className={styles.CancelButton} dataTestId="cancel" fullWidth variant="outlined">Cancel</Button>
+            <Button dataTestId="Continue" fullWidth type="submit">Continue</Button>
+          </CardFooter>
+        </Card>
+      </form>
+    </FormProvider>
+  )
+}

@@ -23,6 +23,10 @@
   --font-color: var(--font-color-black)
 }
 
+.Red {
+  --font-color: var(--font-color-red)
+}
+
 .LightGrey {
   --font-color: var(--font-color-light-grey)
 }

@@ -13,6 +13,7 @@ interface Props {
   dataTestId: string
   fullWidth?: boolean
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
+  type?: 'button' | 'submit' 
   variant?: 'contained' | 'outlined'
 }
 
@@ -22,6 +23,7 @@ export const Button = ({
   dataTestId,
   fullWidth,
   onClick,
+  type = 'button',
   variant = "contained"
 }: Props) => {
   const surfaceClassNames = useSurface({
@@ -51,6 +53,7 @@ export const Button = ({
     className={buttonClassNames}
     data-testid={dataTestId}
     onClick={onClick}
+    type={type}
   >
     {children}
   </button>

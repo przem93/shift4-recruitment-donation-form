@@ -1,0 +1,5 @@
+.Fields {
+  @container (width < 600px) {
+    --flex-direction: column;
+  }
+}

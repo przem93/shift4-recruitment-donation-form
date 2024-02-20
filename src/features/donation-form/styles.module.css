@@ -1,17 +1,20 @@
-.Header {
-  position: relative;
-}
-
-.DonationForm {
-  grid-column: content;
-
-  @media (width < 600px) {
-    height: 100vh;
-  }
-}
 
 .CancelButton {
   @container (width < 600px) {
     display: none;
   }
+}
+
+.Card {
+  @media (width < 600px) {
+    height: 100svh;
+  }
+}
+
+.Form {
+  grid-column: content;
+}
+
+.Header {
+  position: relative;
 }

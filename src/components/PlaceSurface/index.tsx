@@ -5,7 +5,7 @@ import { useSurface } from "@/hooks/useSurface"
 import clsx from "clsx"
 import { useMemo } from "react"
 
-type Props = {
+export type PlaceSurfaceProps = {
   border?: Borders
   borderRadius?: BordersRadius
   children: React.ReactNode
@@ -22,7 +22,7 @@ export const PlaceSurface = ({
   color,
   elevation,
   ...spacesProps
-}: Props) => {
+}: PlaceSurfaceProps) => {
   const spacesClassNames = useSpaces(spacesProps)
   const surfaceClassNames = useSurface({
     border,

@@ -5,13 +5,13 @@
 .DonationForm {
   grid-column: content;
 
-  @media (width <= 600px) {
+  @media (width < 600px) {
     height: 100vh;
   }
 }
 
 .CancelButton {
-  @container (width <= 600px) {
+  @container (width < 600px) {
     display: none;
   }
 }

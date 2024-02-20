@@ -7,9 +7,10 @@ import { Span } from "@/components/Typography/Span"
 import { useMemo } from "react"
 import { useFormContext, useWatch } from "react-hook-form"
 import { FormValues } from "../../types/FormValues"
+import { useTypography } from "@/hooks/useTypography"
+import { currentDate } from "../../consts/currentDate"
 
 import styles from './styles.module.css'
-import { useTypography } from "@/hooks/useTypography"
 
 const formatOptions = {
   maximumFractionDigits: 2,
@@ -22,8 +23,6 @@ const monthDifference = (date1: Date, date2: Date) => {
   var months = date2.getMonth() - date1.getMonth();
   return Math.abs(years * 12 + months);
 }
-
-const currentDate = new Date()
 
 export const DonationFormContent = () => {
   const { control } = useFormContext<FormValues>()

@@ -23,7 +23,8 @@ const possibleSeparators = [decimalSeparator, ',']
 const backspace = 'Backspace'
 const arrowLeft = 'ArrowLeft'
 const arrowRight = 'ArrowRight'
-const allowedKeyCodes = [...[...Array(10)].map((_item, index) => `${index}`), ...possibleSeparators, backspace, arrowLeft, arrowRight]
+const tab = 'Tab'
+const allowedKeyCodes = [...[...Array(10)].map((_item, index) => `${index}`), ...possibleSeparators, backspace, arrowLeft, arrowRight, tab]
 const formatOptions = {
   maximumFractionDigits: 2,
   minimumFractionDigits: 2,
@@ -40,6 +41,7 @@ export const FieldMoney = ({ label, name, required }: Props) => {
   const lasTypedChard = useRef('')
   const inputRef = useRef<HTMLInputElement | null>()
   const id = useId()
+  const errorId = useId()
   const { control } = useFormContext()
   const { field, formState: { errors } } = useController({
     name,
@@ -153,12 +155,14 @@ export const FieldMoney = ({ label, name, required }: Props) => {
     paddingRight={4}
     paddingLeft={2}
     validation={
-      <FieldError name={name} errors={errors} />
+      <FieldError id={errorId} name={name} errors={errors} />
     }
   >
     <Flex gap={2}>
       <DollarIcon />
       <input
+        aria-describedby={errorId}
+        aria-invalid={Boolean(errors[name])}
         autoComplete="off"
         className={inputClassName}
         defaultValue={field.value}

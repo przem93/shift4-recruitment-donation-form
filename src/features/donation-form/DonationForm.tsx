@@ -7,6 +7,7 @@ import { CardFooter } from "@/components/Card/CardFooter";
 import { CardHeader } from "@/components/Card/CardHeader";
 import { DonationFormContent } from "./components/DonationFormContent";
 import { DonationFormHeader } from "./components/DonationFormHeader";
+import { currentDate } from "./consts/currentDate";
 
 import styles from './styles.module.css'
 
@@ -15,8 +16,8 @@ export const DonationForm = () => {
     mode: "onChange",
     reValidateMode: "onChange",
     defaultValues: {
-      amount: 0,
-      endMonth: new Date()
+      amount: null,
+      endMonth: currentDate
     }
   })
 

@@ -5,11 +5,12 @@ import { ErrorMessage } from "@hookform/error-message"
 import { useSpaces } from "@/hooks/useSpaces"
 
 interface Props {
+  id: string
   errors: FieldErrors
   name: string
 }
 
-export const FieldError = ({ name, errors }: Props) => {
+export const FieldError = ({ id, name, errors }: Props) => {
   const typographyClassNames = useTypography({
     color: "Red",
     size: "XSmall",
@@ -20,6 +21,6 @@ export const FieldError = ({ name, errors }: Props) => {
   return <ErrorMessage
     errors={errors}
     name={name}
-    render={({ message }) => <div className={clsx(typographyClassNames, spacesClassNames)}>{message}</div>}
+    render={({ message }) => <div className={clsx(typographyClassNames, spacesClassNames)} id={id} role="alert">{message}</div>}
   />
 }

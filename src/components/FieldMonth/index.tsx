@@ -21,7 +21,8 @@ export const FieldMonth = ({
   name,
   min
 }: Props) => {
-  const id = useId()
+  const errorId = useId()
+  const labelId = useId()
   const { control } = useFormContext()
   const minValidationDate = useMemo(() => (
     min ? Intl.DateTimeFormat('en-US', {
@@ -72,24 +73,32 @@ export const FieldMonth = ({
   }, [changeMonth])
 
   return <Field
+    ariaDescribedBy={errorId}
+    ariaInvalid={Boolean(errors[name])}
+    ariaLive="polite"
+    ariaValueMin={min && min.getFullYear() * 100 + min.getMonth()}
+    ariaValueNow={field.value && field.value.getFullYear() * 100 + field.value.getMonth()}
+    ariaValueText={`${month} ${year}`}
     className={styles.Field}
-    id={id}
     label={label}
+    labelId={labelId}
     paddingTop={3}
     paddingBottom={3}
     paddingRight={3}
     paddingLeft={3}
+    role="slider"
+    tabIndex={0}
     validation={
-      <FieldError name={name} errors={errors} />
+      <FieldError id={errorId} name={name} errors={errors} />
     }
   >
     <Flex alignItems="Center" gap={4} justifyContent="SpaceBetween">
-      <IconButton onClick={subtractMonth} icon="chevronLeft" />
+      <IconButton ariaLabel="Previous month" onClick={subtractMonth} icon="chevronLeft" />
       <Flex flexDirection="Column" alignItems="Center">
         <Span color="MidnightGrey" family="Rubik" weight="Medium">{month}</Span>
         <Span color="MidnightGrey" size="XSmall">{year}</Span>
       </Flex>
-      <IconButton icon="chevronRight" onClick={addMonth} />
+      <IconButton ariaLabel="Next month" icon="chevronRight" onClick={addMonth} />
     </Flex>
   </Field>
 }

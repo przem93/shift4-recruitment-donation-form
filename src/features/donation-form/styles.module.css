@@ -17,4 +17,16 @@
 
 .Header {
   position: relative;
+
+  @container (width < 600px) {
+    --padding-left: var(--space-6);
+    --padding-right: var(--space-6);
+  }
+}
+
+.MobileSize {
+  @container (width < 600px) {
+    --margin-left: var(--space-6);
+    --margin-right: var(--space-6);
+  }
 }

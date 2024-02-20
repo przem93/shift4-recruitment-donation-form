@@ -1,8 +1,10 @@
 .Flex {
   --align-items: flex-start;
+  --justify-content: flex-start;
   --flex-direction: row;
   display: flex;
   align-items: var(--align-items);
+  justify-content: var(--justify-content);
   flex-direction: var(--flex-direction)
 }
 
@@ -24,4 +26,20 @@
 
 .AlignItemsFlexEnd {
   --align-items: flex-end;
+}
+
+.JustifyContentCenter {
+  --justify-content: center;
+}f
+
+.JustifyContentFlexStart {
+  --justify-content: flex-start;
+}
+
+.JustifyContentFlexEnd {
+  --justify-content: flex-end;
+}
+
+.JustifyContentSpaceBetween {
+  --justify-content: space-between;
 }

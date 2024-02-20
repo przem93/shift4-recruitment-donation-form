@@ -54,6 +54,7 @@ export const FieldMoney = ({ label, name, required }: Props) => {
   })
   const typographyNames = useTypography({
     color: "MidnightBlue",
+    family: "Rubik",
     size: "Medium",
     weight: "Medium"
   })

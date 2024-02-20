@@ -34,3 +34,7 @@
 .PurpleGrey {
   --font-color: var(--font-color-purple-grey)
 }
+
+.BlueGrey {
+  --font-color: var(--font-color-blue-grey)
+}

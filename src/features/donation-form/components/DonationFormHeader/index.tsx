@@ -12,7 +12,7 @@ export const DonationFormHeader = () => (
     <Image alt="Giving block icon" src={givingBlockIcon} />
     <div>
       <H1 className={styles.H1} color="MidnightPurple">The giving block</H1>
-      <Span color="MidnightGrey" weight="Light">Set up your donation goal!</Span>
+      <Span color="MidnightGrey" family="Inter" weight="Light">Set up your donation goal!</Span>
     </div>
     <IconButton className={styles.CloseButton} color="Salmon" icon="close" size="Medium" />
   </Flex>

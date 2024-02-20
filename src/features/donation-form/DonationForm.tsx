@@ -14,6 +14,10 @@ export const DonationForm = () => {
   const methods = useForm({
     mode: "onChange",
     reValidateMode: "onChange",
+    defaultValues: {
+      amount: 0,
+      endMonth: new Date()
+    }
   })
 
   return (
@@ -28,10 +32,10 @@ export const DonationForm = () => {
           <CardHeader className={styles.Header}>
             <DonationFormHeader />
           </CardHeader>
-          <CardContent>
+          <CardContent className={styles.MobileSize}>
             <DonationFormContent />
           </CardContent>
-          <CardFooter>
+          <CardFooter className={styles.MobileSize}>
             <Button className={styles.CancelButton} dataTestId="cancel" fullWidth variant="outlined">Cancel</Button>
             <Button dataTestId="Continue" fullWidth type="submit">Continue</Button>
           </CardFooter>

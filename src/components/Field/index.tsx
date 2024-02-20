@@ -21,7 +21,7 @@ export const Field = ({ children, className, id, label, validation, ...margins }
 
   return <div className={styles.Field}>
     <label className={clsx(labelClassNames, styles.Label)} htmlFor={id}>{label}</label>
-    <PlaceSurface border="Light" borderRadius="Small" className={className} {...margins}>
+    <PlaceSurface border="Light" borderRadius="Small" className={clsx(className, styles.InputSurface)} {...margins}>
       {children}
     </PlaceSurface>
     {validation}

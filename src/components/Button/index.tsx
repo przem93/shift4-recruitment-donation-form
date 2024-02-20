@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { ButtonHTMLAttributes, useMemo } from "react"
 import clsx from 'clsx'
 
 import { useSurface } from "@/hooks/useSurface"
@@ -13,7 +13,7 @@ interface Props {
   dataTestId: string
   fullWidth?: boolean
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
-  type?: 'button' | 'submit' 
+  type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
   variant?: 'contained' | 'outlined'
 }
 

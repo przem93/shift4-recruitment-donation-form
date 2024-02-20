@@ -1,5 +1,19 @@
-.Fields {
-  @container (width < 600px) {
+
+@container (width < 600px) {
+  .Fields {
     --flex-direction: column;
+  }
+
+  .TotalAmount {
+    --border: var(--border-light);
+    --padding-top: var(--space-6);
+  }
+
+  .TotalAmountNumber {
+    --font-size: var(--font-size-large);
+  }
+
+  .TotalAmountLabel {
+    --font-size: var(--font-size-base);
   }
 }

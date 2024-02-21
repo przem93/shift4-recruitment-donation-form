@@ -6,6 +6,7 @@ import { FieldError } from "../FieldError"
 import { IconButton } from "../IconButton"
 import { Span } from "../Typography/Span"
 import { dateFormatter, monthFormatter, yearFormatter } from "@/utils/formatters"
+import { currentDate } from "@/consts/currentDate"
 
 import styles from './styles.module.css'
 
@@ -24,14 +25,14 @@ export const FieldMonth = ({
 }: Props) => {
   const errorId = useId()
   const labelId = useId()
-  const { control } = useFormContext()
   const minValidationDate = useMemo(() => (
     min ? dateFormatter.format(min) : ''
   ), [min])
+  const { control } = useFormContext()
   const { field, formState: { errors } } = useController<FieldValues>({
     name,
     control,
-    defaultValue: new Date(),
+    defaultValue: currentDate,
     rules: {
       validate: (value) => {
         if (min && value < min) {
@@ -87,12 +88,12 @@ export const FieldMonth = ({
     }
   >
     <Flex alignItems="Center" gap={4} justifyContent="SpaceBetween">
-      <IconButton ariaLabel="Previous month" onClick={subtractMonth} icon="chevronLeft" />
+      <IconButton ariaLabel="Previous month" dataTestId={`${name}.PrevMonth`} onClick={subtractMonth} icon="chevronLeft" />
       <Flex flexDirection="Column" alignItems="Center">
-        <Span color="MidnightGrey" family="Rubik" weight="Medium">{month}</Span>
-        <Span color="MidnightGrey" size="XSmall">{year}</Span>
+        <Span color="MidnightGrey" dataTestId={`${name}.Month`} family="Rubik" weight="Medium">{month}</Span>
+        <Span color="MidnightGrey" dataTestId={`${name}.Year`} size="XSmall">{year}</Span>
       </Flex>
-      <IconButton ariaLabel="Next month" icon="chevronRight" onClick={addMonth} />
+      <IconButton ariaLabel="Next month" dataTestId={`${name}.NextMonth`} icon="chevronRight" onClick={addMonth} />
     </Flex>
   </Field>
 }

@@ -7,7 +7,7 @@ import { CardFooter } from "@/components/Card/CardFooter";
 import { CardHeader } from "@/components/Card/CardHeader";
 import { DonationFormContent } from "./components/DonationFormContent";
 import { DonationFormHeader } from "./components/DonationFormHeader";
-import { currentDate } from "./consts/currentDate";
+import { currentDate } from "@/consts/currentDate";
 
 import styles from './styles.module.css'
 

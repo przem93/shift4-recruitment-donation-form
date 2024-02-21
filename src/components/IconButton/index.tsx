@@ -20,13 +20,14 @@ interface Props {
   ariaLabel?: string
   className?: string
   color?: 'SkyBlue' | 'Salmon'
+  dataTestId?: string
   icon: keyof typeof icons
   onClick?: () => void
   size?: 'Small' | 'Medium'
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
 }
 
-export const IconButton = ({ ariaLabel, className, color = 'SkyBlue', icon, onClick, size, type = "button" }: Props) => {
+export const IconButton = ({ ariaLabel, className, color = 'SkyBlue', dataTestId, icon, onClick, size, type = "button" }: Props) => {
   const surfacesClassNames = useSurface({
     border: "None",
     borderRadius: "Small",
@@ -45,7 +46,7 @@ export const IconButton = ({ ariaLabel, className, color = 'SkyBlue', icon, onCl
     )
   ), [className, color, size, spacesClassNames, surfacesClassNames])
   return (
-    <button aria-label={ariaLabel} className={iconButtonClassName} onClick={onClick} type={type}>
+    <button aria-label={ariaLabel} className={iconButtonClassName} data-testid={dataTestId} onClick={onClick} type={type}>
       <Suspense fallback=''>
         {icons[icon]}
       </Suspense>

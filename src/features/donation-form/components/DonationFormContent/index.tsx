@@ -8,8 +8,8 @@ import { useMemo } from "react"
 import { useFormContext, useWatch } from "react-hook-form"
 import { FormValues } from "../../types/FormValues"
 import { useTypography } from "@/hooks/useTypography"
-import { currentDate } from "../../consts/currentDate"
 import { currencyFormatter, dateFormatter, numberFormatter } from "@/utils/formatters"
+import { currentDate } from "@/consts/currentDate"
 
 import styles from './styles.module.css'
 
@@ -60,7 +60,7 @@ export const DonationFormContent = () => {
 
   return <>
     <Flex className={styles.Fields} gap={6}>
-      <FieldMoney label="I can donate" name="amount" required />
+      <FieldMoney label="I can donate" name="amount" min={1} required />
       <FieldMonth label="Every month until" name="endMonth" min={currentDate} />
     </Flex>
     <PlaceSurface className={styles.TotalAmount} paddingTop={0} marginTop={8} border="None" borderRadius="Medium">

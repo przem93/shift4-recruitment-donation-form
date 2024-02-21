@@ -5,7 +5,7 @@ import borderRadiusStyles from "@/styles/surface/borders-radius.module.css"
 import elevationsStyles from "@/styles/surface/elevations.module.css"
 import colorsStyles from "@/styles/surface/colors.module.css"
 
-export const surfaceBorders = ['Light', 'Dark', 'Nones'] as const
+export const surfaceBorders = ['Light', 'Dark', 'None'] as const
 export const surfaceBordersRadius = ['Small', 'Medium'] as const
 export const surfaceColors = [
   'AlmostWhite',

@@ -9,7 +9,7 @@ const renderSurfaceHook = (params: HookSurfaceParams) => {
 }
 
 describe('useSurface', () => {
-  describe('', () => {
+  describe('single parameter', () => {
     it('should generate correct classes for given border', () => {
       const classNames = renderSurfaceHook({
         border: surfaceBorders[0]
@@ -47,7 +47,7 @@ describe('useSurface', () => {
     })
   })
   
-  describe('combined', () => {
+  describe('combined parameters', () => {
     it('should generate correct classes for combined border and color', () => {
       const classNames = renderSurfaceHook({
         border: surfaceBorders[0],

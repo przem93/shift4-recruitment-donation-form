@@ -14,8 +14,10 @@ import styles from './styles.module.css'
 import { numberFormatter } from "@/utils/formatters";
 
 interface Props {
+  dataTestId?: string
   label: string
   name: string
+  min?: number
   required?: boolean
 }
 
@@ -34,7 +36,7 @@ const limitTo2DecimalDigits = (number: number) => {
 }
 const parseFormattedValueToNumber = (value: string) => parseFloat(value.replace(/,/g, ''))
 
-export const FieldMoney = ({ label, name, required }: Props) => {
+export const FieldMoney = ({ dataTestId, label, name, min, required }: Props) => {
   const lasTypedChard = useRef('')
   const inputRef = useRef<HTMLInputElement | null>()
   const id = useId()
@@ -44,11 +46,11 @@ export const FieldMoney = ({ label, name, required }: Props) => {
     name,
     control,
     rules: {
-      required: 'Field is required',
-      min: {
+      required: required && 'Field is required',
+      min: min && min > -1 ? {
         value: 1,
         message: 'Value must be grater then 0'
-      }
+      } : undefined
     }
   })
   const typographyNames = useTypography({
@@ -162,6 +164,7 @@ export const FieldMoney = ({ label, name, required }: Props) => {
         aria-invalid={Boolean(errors[name])}
         autoComplete="off"
         className={inputClassName}
+        data-testid={dataTestId}
         defaultValue={field.value}
         disabled={field.disabled}
         id={id}

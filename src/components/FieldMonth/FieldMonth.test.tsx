@@ -3,11 +3,6 @@ import '@testing-library/jest-dom'
 import '@/tests/mockReactHookForm.tsx'
 import { FieldMonth } from "./index";
 
-interface FieldErrorProps {
-  name: string
-  errors: Record<string, any>
-}
-
 jest.mock('../../consts/currentDate', () => ({
   currentDate: new Date('2024-02-21'),
 }))

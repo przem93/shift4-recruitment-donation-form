@@ -13,13 +13,13 @@
   }
 
   &.Contained {
-    --button-active-background: #241E47;
-    --button-hover-background: #645D93;
+    --button-active-background: var(--surface-color-dark-midnight-purple);
+    --button-hover-background: var(--surface-color-royal-purple);
   }
 
   &.Outlined {
-    --button-active-background: #ebe9fc;
-    --button-hover-background: #f7f6fe;
+    --button-active-background: var(--surface-color-ultra-light-blue-gray);
+    --button-hover-background: var(--surface-color-off-white);
   }
 
   &.FullWidth {

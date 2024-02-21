@@ -11,6 +11,7 @@ import { useSpaces } from "@/hooks/useSpaces"
 import { useSurface } from "@/hooks/useSurface"
 
 import styles from './styles.module.css'
+import { numberFormatter } from "@/utils/formatters";
 
 interface Props {
   label: string
@@ -25,11 +26,7 @@ const arrowLeft = 'ArrowLeft'
 const arrowRight = 'ArrowRight'
 const tab = 'Tab'
 const allowedKeyCodes = [...[...Array(10)].map((_item, index) => `${index}`), ...possibleSeparators, backspace, arrowLeft, arrowRight, tab]
-const formatOptions = {
-  maximumFractionDigits: 2,
-  minimumFractionDigits: 2,
-  trailingZeroDisplay: "stripIfInteger"
-}
+
 const limitTo2DecimalDigits = (number: number) => {
   const decimalNumber = new Decimal(number)
 
@@ -139,7 +136,7 @@ export const FieldMoney = ({ label, name, required }: Props) => {
     const value = e.target.value
     if (e.target.value) {
       const numberValue = parseFormattedValueToNumber(value)
-      const formattedNumber = new Intl.NumberFormat("en-US", formatOptions).format(numberValue)
+      const formattedNumber = numberFormatter.format(numberValue)
       e.target.value = formattedNumber
     }
 

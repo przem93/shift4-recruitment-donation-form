@@ -1,17 +1,17 @@
 import type { HookSpacesParams } from "@/hooks/useSpaces"
 import { useSpaces } from "@/hooks/useSpaces"
-import type { BackgroundColors, Borders, BordersRadius, Elevations } from "@/hooks/useSurface"
+import type { SurfaceBorders, SurfaceBordersRadius, SurfaceColors, SurfaceElevations } from "@/hooks/useSurface"
 import { useSurface } from "@/hooks/useSurface"
 import clsx from "clsx"
 import { useMemo } from "react"
 
 export type PlaceSurfaceProps = {
-  border?: Borders
-  borderRadius?: BordersRadius
+  border?: SurfaceBorders
+  borderRadius?: SurfaceBordersRadius
   children: React.ReactNode
   className?: string,
-  color?: BackgroundColors
-  elevation?: Elevations
+  color?: SurfaceColors
+  elevation?: SurfaceElevations
 } & HookSpacesParams
 
 export const PlaceSurface = ({

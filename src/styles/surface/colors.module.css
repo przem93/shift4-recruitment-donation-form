@@ -3,8 +3,36 @@
   background-color: var(--background-color);
 }
 
-.Purple {
-  --background-color: var(--surface-color-purple)
+.AlmostWhite {
+  --background-color: var(--surface-color-almost-white);
+}
+
+.BlushPink {
+  --background-color: var(--surface-color-blush-pink);
+}
+
+.DarkMidnightPurple {
+  --background-color: var(--surface-color-dark-midnight-purple);
+}
+
+.LightSlate {
+  --background-color: var(--surface-color-light-slate);
+}
+
+.MidnightPurple {
+  --background-color: var(--surface-color-midnight-purple)
+}
+
+.OffWhite {
+  --background-color: var(--surface-color-off-white);
+}
+
+.RoyalPurple {
+  --background-color: var(--surface-color-royal-purple);
+}
+
+.Sand {
+  --background-color: var(--surface-color-sand);
 }
 
 .Salmon {
@@ -13,6 +41,10 @@
 
 .SkyBlue {
   --background-color: var(--surface-color-sky-blue)
+}
+
+.UltraLightBlueGray {
+  --background-color: var(--surface-color-ultra-light-blue-gray);
 }
 
 .White {

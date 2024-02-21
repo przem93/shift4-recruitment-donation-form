@@ -9,6 +9,7 @@ import { useFormContext, useWatch } from "react-hook-form"
 import { FormValues } from "../../types/FormValues"
 import { useTypography } from "@/hooks/useTypography"
 import { currentDate } from "../../consts/currentDate"
+import { currencyFormatter, dateFormatter, numberFormatter } from "@/utils/formatters"
 
 import styles from './styles.module.css'
 
@@ -44,14 +45,11 @@ export const DonationFormContent = () => {
     endMonth,
     total,
   } = useMemo(() => {
-    const amount = amountField ? new Intl.NumberFormat("en-US", formatOptions).format(amountField) : 0
-    const endMonth = Intl.DateTimeFormat('en-US', {
-      month: "long",
-      year: "numeric"
-    }).format(endMonthField)
+    const amount = amountField ? numberFormatter.format(amountField) : 0
+    const endMonth = dateFormatter.format(endMonthField)
     const months = monthDifference(endMonthField, currentDate)
     const totalNumber = new Decimal(amountField ?? 0).mul(months).toNumber()
-    const total = Intl.NumberFormat('en-US', { ...formatOptions, currency: "USD", style: "currency" }).format(totalNumber)
+    const total = currencyFormatter.format(totalNumber)
 
     return {
       amount,

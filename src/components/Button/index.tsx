@@ -29,7 +29,7 @@ export const Button = ({
   const surfaceClassNames = useSurface({
     border: variant === "outlined" ? "Dark" : "None",
     borderRadius: "Small",
-    color: variant === "contained" ? "Purple" : undefined,
+    color: variant === "contained" ? "MidnightPurple" : undefined,
   })
   const typographyClassNames = useTypography({
     color: variant === "contained" ? "White" : "MidnightBlue",

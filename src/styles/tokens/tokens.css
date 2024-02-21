@@ -2,9 +2,10 @@
 @import url("typography/sizes.css");
 @import url("typography/weights.css");
 
+@import url("surfaces/borders.css");
+@import url("surfaces/colors.css");
+@import url("surfaces/elevations.css");
+
 @import url("base-colors.css");
-@import url("borders.css");
-@import url("elevations.css");
 @import url("sizes.css");
 @import url("spaces.css");
-@import url("surfaces-colors.css");

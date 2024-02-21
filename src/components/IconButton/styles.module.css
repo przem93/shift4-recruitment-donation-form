@@ -12,21 +12,21 @@
 
 .Salmon {
   &:hover {
-    --background-color: #F2D0C1;
+    --background-color: var(--surface-color-blush-pink);
   }
 
   &:active {
-    --background-color: #ebbda9;
+    --background-color: var(--surface-color-sand);
   }
 }
 
 .SkyBlue {
   &:hover {
-    --background-color: #F3F5FE;
+    --background-color: var(--surface-color-almost-white);
   }
 
   &:active {
-    --background-color: #E8EAF2;
+    --background-color: var(--surface-color-light-slate);
   }
 }
 

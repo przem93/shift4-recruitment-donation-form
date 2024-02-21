@@ -1,10 +1,11 @@
 import React, { useCallback, useId, useMemo } from "react"
 import { Field } from "../Field"
 import { Flex } from "../Flex"
-import { useController, useFormContext, FieldPath } from 'react-hook-form'
+import { useController, useFormContext } from 'react-hook-form'
 import { FieldError } from "../FieldError"
 import { IconButton } from "../IconButton"
 import { Span } from "../Typography/Span"
+import { dateFormatter, monthFormatter, yearFormatter } from "@/utils/formatters"
 
 import styles from './styles.module.css'
 
@@ -25,10 +26,7 @@ export const FieldMonth = ({
   const labelId = useId()
   const { control } = useFormContext()
   const minValidationDate = useMemo(() => (
-    min ? Intl.DateTimeFormat('en-US', {
-      month: "long",
-      year: "numeric"
-    }).format(min) : ''
+    min ? dateFormatter.format(min) : ''
   ), [min])
   const { field, formState: { errors } } = useController<FieldValues>({
     name,
@@ -48,12 +46,8 @@ export const FieldMonth = ({
     month,
     year,
   } = useMemo(() => ({
-      month: Intl.DateTimeFormat('en-US', {
-        month: "long"
-      }).format(field.value),
-      year: Intl.DateTimeFormat('en-US', {
-        year: "numeric"
-    }).format(field.value)
+      month: monthFormatter.format(field.value),
+      year: yearFormatter.format(field.value)
     }), 
     [field.value]
   )

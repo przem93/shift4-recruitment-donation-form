@@ -1,0 +1,15 @@
+:root {
+  --surface-color-almost-white: var(--color-almost-white);
+  --surface-color-blush-pink: var(--color-blush-pink);
+  --surface-color-dark-midnight-purple: var(--color-dark-midnight-purple);
+  --surface-color-light-slate: var(--color-light-slate);
+  --surface-color-midnight-purple: var(--color-midnight-purple);
+  --surface-color-off-white: var(--color-off-white);
+  --surface-color-royal-purple: var(--color-royal-purple);
+  --surface-color-salmon: var(--color-salmon);
+  --surface-color-sand: var(--color-sand);
+  --surface-color-sky-blue: var(--color-sky-blue);
+  --surface-color-transparent: var(--color-transparent);
+  --surface-color-ultra-light-blue-gray: var(--color-ultra-light-blue-gray);
+  --surface-color-white: var(--color-white);
+}

@@ -5,16 +5,27 @@ import borderRadiusStyles from "@/styles/surface/borders-radius.module.css"
 import elevationsStyles from "@/styles/surface/elevations.module.css"
 import colorsStyles from "@/styles/surface/colors.module.css"
 
-export type BackgroundColors =  'Purple'  | 'Salmon' | 'SkyBlue' | 'White'
-export type Borders = 'Light' | 'Dark' | 'None'
-export type BordersRadius = 'Small' | 'Medium'
-export type Elevations = 1
+export type SurfaceBorders = 'Light' | 'Dark' | 'None'
+export type SurfaceBordersRadius = 'Small' | 'Medium'
+export type SurfaceColors = 'AlmostWhite' |
+  'BlushPink' |
+  'LightSlate' |
+  'DarkMidnightPurple' |
+  'MidnightPurple'  |
+  'OffWhite' |
+  'RoyalPurple' |
+  'Sand' |
+  'Salmon' |
+  'SkyBlue' |
+  'UltraLightBlueGray' |
+  'White'
+export type SurfaceElevations = 1
 
 interface Params {
-  border?: Borders
-  borderRadius?: BordersRadius
-  color?: BackgroundColors
-  elevation?: Elevations
+  border?: SurfaceBorders
+  borderRadius?: SurfaceBordersRadius
+  color?: SurfaceColors
+  elevation?: SurfaceElevations
 }
 
 export const useSurface = ({ border, borderRadius, color, elevation }: Params) => (

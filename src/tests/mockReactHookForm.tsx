@@ -52,6 +52,7 @@ jest.mock('react-hook-form', () => ({
   
     return {
       field: {
+        onBlur: () => {},
         onChange,
         ref: () => {},
         value,

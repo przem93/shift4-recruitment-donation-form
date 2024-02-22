@@ -10,9 +10,9 @@
   padding-block: 0;
   padding-inline: 0;
   font-family: inherit;
+}
   
-  &::placeholder {
-    color: var(--font-color-light-grey);
-    opacity: 1;
-  }
+.Input::placeholder {
+  color: var(--font-color-light-grey);
+  opacity: 1;
 }

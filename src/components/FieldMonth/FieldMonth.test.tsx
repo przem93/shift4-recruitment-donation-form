@@ -10,7 +10,7 @@ jest.mock('../../consts/currentDate', () => ({
 describe('FieldMonth', () => {
   it('should render correct month and year', async () => {
     await act(async () => {
-      render(<FieldMonth label="Label" name="name" />)
+      render(<FieldMonth dataTestId="name" label="Label" name="name" />)
     })
 
     expect(screen.getByTestId('name.Month')).toHaveTextContent('February')
@@ -19,7 +19,7 @@ describe('FieldMonth', () => {
 
   it('should render correct month after clicking next month button', async () => {
     await act(async () => {
-      render(<FieldMonth label="Label" name="name" />)
+      render(<FieldMonth dataTestId="name" label="Label" name="name" />)
     })
 
     expect(screen.getByTestId('name.Month')).toHaveTextContent('February')
@@ -33,7 +33,7 @@ describe('FieldMonth', () => {
 
   it('should render correct month after double clicking prev month button', async () => {
     await act(async () => {
-      render(<FieldMonth label="Label" name="name" />)
+      render(<FieldMonth dataTestId="name" label="Label" name="name" />)
     })
 
     expect(screen.getByTestId('name.Month')).toHaveTextContent('February')
@@ -48,7 +48,7 @@ describe('FieldMonth', () => {
 
   it('should render error when month is before min', async () => {
     await act(async () => {
-      render(<FieldMonth label="Label" name="name" min={new Date('2022-01-01')} />)
+      render(<FieldMonth dataTestId="name" label="Label" name="name" min={new Date('2022-01-01')} />)
     })
 
     fireEvent.click(screen.getByTestId('name.PrevMonth'))

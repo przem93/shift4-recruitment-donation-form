@@ -3,26 +3,26 @@
   cursor: pointer;
   line-height: 1.25;
   height: calc(13 * var(--size-base));
+}
 
-  &:hover {
-    background-color: var(--button-hover-background, transparent);
-  }
+.Button:hover {
+  background-color: var(--button-hover-background, transparent);
+}
 
-  &:active {
-    background-color: var(--button-active-background, transparent);
-  }
+.Button:active {
+  background-color: var(--button-active-background, transparent);
+}
 
-  &.Contained {
-    --button-active-background: var(--surface-color-dark-midnight-purple);
-    --button-hover-background: var(--surface-color-royal-purple);
-  }
+.Contained {
+  --button-active-background: var(--surface-color-dark-midnight-purple);
+  --button-hover-background: var(--surface-color-royal-purple);
+}
 
-  &.Outlined {
-    --button-active-background: var(--surface-color-ultra-light-blue-gray);
-    --button-hover-background: var(--surface-color-off-white);
-  }
+.Outlined {
+  --button-active-background: var(--surface-color-ultra-light-blue-gray);
+  --button-hover-background: var(--surface-color-off-white);
+}
 
-  &.FullWidth {
-    width: 100%;
-  }
+.FullWidth {
+  width: 100%;
 }

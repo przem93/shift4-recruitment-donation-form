@@ -13,12 +13,14 @@ import styles from './styles.module.css'
 type FieldValues = Record<string, Date>
 
 interface Props {
+  dataTestId?: string
   label: string
   name: string
   min?: Date
 }
 
 export const FieldMonth = ({
+  dataTestId,
   label,
   name,
   min
@@ -35,8 +37,10 @@ export const FieldMonth = ({
     defaultValue: currentDate,
     rules: {
       validate: (value) => {
-        if (min && value < min) {
-          return `Date must be grater then ${minValidationDate}`
+        if (min) {
+          const valueTime = value.getTime()
+          const minTime = min.getTime()
+          return valueTime <= minTime ? `Date must be grater then ${minValidationDate}` : true
         }
 
         return true
@@ -75,6 +79,7 @@ export const FieldMonth = ({
     ariaValueNow={field.value && field.value.getFullYear() * 100 + field.value.getMonth()}
     ariaValueText={`${month} ${year}`}
     className={styles.Field}
+    dataTestId={dataTestId}
     label={label}
     labelId={labelId}
     paddingTop={3}
@@ -88,12 +93,12 @@ export const FieldMonth = ({
     }
   >
     <Flex alignItems="Center" gap={4} justifyContent="SpaceBetween">
-      <IconButton ariaLabel="Previous month" dataTestId={`${name}.PrevMonth`} onClick={subtractMonth} icon="chevronLeft" />
+      <IconButton ariaLabel="Previous month" dataTestId={`${dataTestId}.PrevMonth`} onClick={subtractMonth} icon="chevronLeft" />
       <Flex flexDirection="Column" alignItems="Center">
-        <Span color="MidnightGrey" dataTestId={`${name}.Month`} family="Rubik" weight="Medium">{month}</Span>
-        <Span color="MidnightGrey" dataTestId={`${name}.Year`} size="XSmall">{year}</Span>
+        <Span color="MidnightGrey" dataTestId={`${dataTestId}.Month`} family="Rubik" weight="Medium">{month}</Span>
+        <Span color="MidnightGrey" dataTestId={`${dataTestId}.Year`} size="XSmall">{year}</Span>
       </Flex>
-      <IconButton ariaLabel="Next month" dataTestId={`${name}.NextMonth`} icon="chevronRight" onClick={addMonth} />
+      <IconButton ariaLabel="Next month" dataTestId={`${dataTestId}.NextMonth`} icon="chevronRight" onClick={addMonth} />
     </Flex>
   </Field>
 }

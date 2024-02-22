@@ -147,6 +147,7 @@ export const FieldMoney = ({ dataTestId, label, name, min, required }: Props) =>
 
   return <Field
     className={styles.Field}
+    dataTestId={dataTestId}
     id={id}
     label={label}
     paddingTop={4}
@@ -164,7 +165,7 @@ export const FieldMoney = ({ dataTestId, label, name, min, required }: Props) =>
         aria-invalid={Boolean(errors[name])}
         autoComplete="off"
         className={inputClassName}
-        data-testid={dataTestId}
+        data-testid={`${dataTestId}.input`}
         defaultValue={field.value}
         disabled={field.disabled}
         id={id}

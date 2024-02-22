@@ -4,30 +4,22 @@
   width: var(--icon-button-size);
   height: var(--icon-button-size);
   cursor: pointer;
-
-  &.FullWidth {
-    width: 100%;
-  }
 }
 
-.Salmon {
-  &:hover {
-    --background-color: var(--surface-color-blush-pink);
-  }
-
-  &:active {
-    --background-color: var(--surface-color-sand);
-  }
+.Salmon:hover {
+  --background-color: var(--surface-color-blush-pink);
 }
 
-.SkyBlue {
-  &:hover {
-    --background-color: var(--surface-color-almost-white);
-  }
+.Salmon:active {
+  --background-color: var(--surface-color-sand);
+}
 
-  &:active {
-    --background-color: var(--surface-color-light-slate);
-  }
+.SkyBlue:hover {
+  --background-color: var(--surface-color-almost-white);
+}
+
+.SkyBlue:active {
+  --background-color: var(--surface-color-light-slate);
 }
 
 .Small {

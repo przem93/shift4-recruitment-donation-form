@@ -15,6 +15,7 @@ interface Props extends Pick<PlaceSurfaceProps, 'paddingTop' | 'paddingBottom' |
   ariaValueText?: HTMLAttributes<HTMLDivElement>['aria-valuetext']
   children: React.ReactNode
   className?: string
+  dataTestId?: string
   id?: string
   label: string
   labelId?: string
@@ -32,6 +33,7 @@ export const Field = ({
     ariaValueText,
     children,
     className,
+    dataTestId,
     id,
     label,
     labelId,
@@ -55,6 +57,7 @@ export const Field = ({
     aria-valuenow={ariaValueNow}
     aria-valuetext={ariaValueText}
     className={styles.Field}
+    data-testid={dataTestId}
     role={role}
     tabIndex={tabIndex}
   >

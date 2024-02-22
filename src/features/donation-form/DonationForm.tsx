@@ -38,7 +38,7 @@ export const DonationForm = () => {
           </CardContent>
           <CardFooter className={styles.MobileSize}>
             <Button className={styles.CancelButton} dataTestId="cancel" fullWidth variant="outlined">Cancel</Button>
-            <Button dataTestId="Continue" fullWidth type="submit">Continue</Button>
+            <Button dataTestId="continue" fullWidth type="submit">Continue</Button>
           </CardFooter>
         </Card>
       </form>

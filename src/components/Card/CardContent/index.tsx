@@ -6,7 +6,7 @@ export interface CardContentProps {
 }
 
 export const CardContent = ({ children, className }: CardContentProps) => {
-  return <PlaceSurface className={className} marginHorizontal={10} marginVertical={8}>
+  return <PlaceSurface className={className} marginHorizontal={10} marginTop={8}>
     {children}
   </PlaceSurface>
 }

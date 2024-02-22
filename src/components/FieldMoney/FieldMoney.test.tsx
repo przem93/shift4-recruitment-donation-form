@@ -7,36 +7,37 @@ import '@testing-library/jest-dom'
 describe('FieldMonth', () => {
   it('should correctly format value', async () => {
     render(<FieldMoney dataTestId="field" label="Label" name="name" />)
-
-    fireEvent.change(screen.getByTestId('field'), {
+    const field = screen.getByTestId('field.input')
+    fireEvent.change(field, {
       target: {
         value: '4533'
       }
     })
 
-    expect(screen.getByTestId('field')).toHaveValue('4,533')
+    expect(field).toHaveValue('4,533')
 
-    fireEvent.change(screen.getByTestId('field'), {
+    fireEvent.change(field, {
       target: {
         value: '4455533'
       }
     })
 
-    expect(screen.getByTestId('field')).toHaveValue('4,455,533')
+    expect(field).toHaveValue('4,455,533')
 
-    fireEvent.change(screen.getByTestId('field'), {
+    fireEvent.change(field, {
       target: {
         value: '445,5533,456.44'
       }
     })
 
-    expect(screen.getByTestId('field')).toHaveValue('4,455,533,456.44')
+    expect(field).toHaveValue('4,455,533,456.44')
   })
 
   it('should show error when value is below min value', async () => {
     render(<FieldMoney dataTestId="field" label="Label" name="name" min={10} />)
+    const field = screen.getByTestId('field.input')
 
-    fireEvent.change(screen.getByTestId('field'), {
+    fireEvent.change(field, {
       target: {
         value: '4'
       }
@@ -48,7 +49,7 @@ describe('FieldMonth', () => {
   it('should clear value', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" min={10} />)
-    const field = screen.getByTestId('field')
+    const field = screen.getByTestId('field.input')
 
     await user.type(field, '44,44')
     await user.clear(field)
@@ -59,7 +60,7 @@ describe('FieldMonth', () => {
   it('should omit second decimal separator', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" min={10} />)
-    const field = screen.getByTestId('field')
+    const field = screen.getByTestId('field.input')
 
     await user.type(field, '44,44.')
 
@@ -69,7 +70,7 @@ describe('FieldMonth', () => {
   it('should allow type only two decimal digits', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" min={10} />)
-    const field = screen.getByTestId('field')
+    const field = screen.getByTestId('field.input')
 
     await user.type(field, '44,4434')
 
@@ -79,7 +80,7 @@ describe('FieldMonth', () => {
   it('should block keys different then numbers and decimal separator', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" />)
-    const field = screen.getByTestId('field')
+    const field = screen.getByTestId('field.input')
 
     await user.type(field, '4');
     expect(field).toHaveValue('4')
@@ -106,7 +107,7 @@ describe('FieldMonth', () => {
   it('should accept typing comma and dot as decimal separator', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" />)
-    const field = screen.getByTestId('field')
+    const field = screen.getByTestId('field.input')
 
     await user.type(field, '44,44')
     expect(field).toHaveValue('44.44')
@@ -121,7 +122,7 @@ describe('FieldMonth', () => {
   it('should delete on blur decimal when it is equal to zero', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" />)
-    const field = screen.getByTestId('field')
+    const field = screen.getByTestId('field.input')
 
     await user.type(field, '4444.0')
     expect(field).toHaveValue('4,444.0')
@@ -133,7 +134,7 @@ describe('FieldMonth', () => {
   it('should format to 2 decimal digits when it is different then zero', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" />)
-    const field = screen.getByTestId('field')
+    const field = screen.getByTestId('field.input')
 
     await user.type(field, '4444.3')
     expect(field).toHaveValue('4,444.3')
@@ -145,7 +146,7 @@ describe('FieldMonth', () => {
   it('should keep cursor position', async () => {
     const user = userEvent.setup()
     render(<FieldMoney dataTestId="field" label="Label" name="name" />)
-    const field = screen.getByTestId<HTMLInputElement>('field')
+    const field = screen.getByTestId<HTMLInputElement>('field.input')
 
     await user.type(field, '4444.3')
     expect(field).toHaveValue('4,444.3')

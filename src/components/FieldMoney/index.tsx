@@ -56,7 +56,7 @@ export const FieldMoney = ({ dataTestId, label, name, min, required }: Props) =>
   const typographyNames = useTypography({
     color: "MidnightBlue",
     family: "Rubik",
-    size: "Medium",
+    size: "Large",
     weight: "Medium"
   })
   const spacesClassNames = useSpaces({
@@ -151,14 +151,13 @@ export const FieldMoney = ({ dataTestId, label, name, min, required }: Props) =>
     id={id}
     label={label}
     paddingTop={4}
-    paddingBottom={4}
     paddingRight={4}
     paddingLeft={2}
     validation={
       <FieldError id={errorId} name={name} errors={errors} />
     }
   >
-    <Flex gap={2}>
+    <Flex gap={2} alignItems="Center">
       <DollarIcon />
       <input
         aria-describedby={errorId}

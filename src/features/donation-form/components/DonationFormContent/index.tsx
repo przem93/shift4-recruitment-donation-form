@@ -13,12 +13,6 @@ import { currentDate } from "@/consts/currentDate"
 
 import styles from './styles.module.css'
 
-const formatOptions = {
-  maximumFractionDigits: 2,
-  minimumFractionDigits: 2,
-  trailingZeroDisplay: "stripIfInteger"
-}
-
 const monthDifference = (date1: Date, date2: Date) => {
   var years = date2.getFullYear() - date1.getFullYear();
   var months = date2.getMonth() - date1.getMonth();

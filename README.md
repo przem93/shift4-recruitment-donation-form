@@ -32,3 +32,8 @@ yarn test
 ```
 
 ## Proof of working tests
+
+<img width="492" alt="Zrzut ekranu 2024-02-22 o 15 05 34" src="https://github.com/przem93/shift4-recruitment-donation-form/assets/12762248/447f79b7-983d-4608-93de-9c0377f44f5f">
+
+<img width="719" alt="Zrzut ekranu 2024-02-22 o 15 06 23" src="https://github.com/przem93/shift4-recruitment-donation-form/assets/12762248/5bfb53e5-bb55-48d9-9b43-461c75e4f10f">
+

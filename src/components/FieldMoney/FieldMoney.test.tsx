@@ -1,6 +1,6 @@
 import '@/tests/mockReactHookForm.tsx'
 import { FieldMoney } from "./index";
-import { act, render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event"
 import '@testing-library/jest-dom'
 
@@ -23,7 +23,6 @@ describe('FieldMonth', () => {
     })
 
     expect(screen.getByTestId('field')).toHaveValue('4,455,533')
-
 
     fireEvent.change(screen.getByTestId('field'), {
       target: {
@@ -73,8 +72,6 @@ describe('FieldMonth', () => {
     const field = screen.getByTestId('field')
 
     await user.type(field, '44,4434')
-
-    user.p
 
     expect(field).toHaveValue('44.44')
   })

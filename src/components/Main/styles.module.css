@@ -1,11 +1,14 @@
 .Main {
   --main-padding-top: calc(16 * var(--space-1));
+  --main-padding-bottom: calc(16 * var(--space-1));
   display: grid;
   grid-template-columns: 1fr [content-start] min(var(--content-size), 100vw) [content-end] 1fr;
   padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
 
   @media (width < 600px) {
     --main-padding-top: 0px;
+    --main-padding-bottom: 0px;
   }
 }
 

@@ -12,9 +12,9 @@ type Size = 'XLarge' | 'Large' | 'Medium' | 'Small' | 'XSmall'
 type Weight = 'Light' | 'Medium' | 'SemiBold' | 'Bold'
 
 
-const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
-const rubik = Rubik({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
-const workSans = Work_Sans({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
+const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], preload: true });
+const rubik = Rubik({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], preload: true });
+const workSans = Work_Sans({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], preload: true });
 
 export interface HookTypographyParams {
   color?: Colors
